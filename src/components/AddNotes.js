@@ -19,15 +19,15 @@ const AddNotes = (props) => {
             <form className='my-3 mx-4'>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">Title</label>
-                    <input name='title' type="title" minLength={5} className="form-control" id="title"   onChange={onChange}/>
+                    <input style={{width:"80vw"}}name='title' type="title" minLength={5} className="form-control" id="title"   onChange={onChange}/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Description</label>
-                    <textarea name='description' minLength={5} type="text" className="form-control" id="description" aria-describedby="emailHelp"  onChange={onChange}/>
+                    <textarea style={{width:"80vw"}}name='description' minLength={5} type="text" className="form-control" id="description" aria-describedby="emailHelp"  onChange={onChange}/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1"  className="form-label">tag</label>
-                    <input type="tag" name='tag' className="form-control" id="tag"  onChange={onChange} />
+                    <input style={{width:"80vw"}}type="tag" name='tag' className="form-control" id="tag"  onChange={onChange} />
                 </div>
                 <button type="submit" disabled={value.description.length<5||value.title.length<5} className="btn btn-primary" onClick={handleClick}>Add Note</button>
             </form>
