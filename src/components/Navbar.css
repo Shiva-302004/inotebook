@@ -6,11 +6,11 @@
    position: fixed;
 } */
 .navbar{
-   margin-left: -6.5vw;
+   /* margin-left: -6.5vw; */
    display:flex;
    flex-direction: row;
-   position:absolute;
-   width:99vw;
+   position:relative;
+   width:100vw;
    height:10vh;
    background: #80d9f7;
    overflow: hidden;

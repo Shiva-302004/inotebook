@@ -1,33 +1,16 @@
-import React, { useContext } from 'react'
-import NoteContext from '../context/notes/NoteContex'
-import Notes from './Notes'
-
-const Home = () => {
-  
+import React from 'react'
+import {Typewriter,Cursor} from "react-simple-typewriter"
+const Home = (props) => {
+  const word=["Create Notes","Update Notes","Delete Notes"]
   return (
-    <div className='container' style={{position:"absolute", marginTop:"11vh"}} >
-      <div className="addnotes" >
-        <h3 >AddNotes</h3>
-        <form className='my-3'>
-          <div className="mb-3">
-            <label for="exampleInputEmail1" className="form-label">Email address</label>
-            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-              <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-          </div>
-          <div className="mb-3">
-            <label for="exampleInputPassword1" className="form-label">Password</label>
-            <input type="password" className="form-control" id="exampleInputPassword1"/>
-          </div>
-          <div className="mb-3 form-check">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-              <label className="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
-      </div>
-      <div className="getnotes my-3">
-        <Notes></Notes>
-      </div>
+    <div style={{height:"80vh"}}>
+    <div className=' d-flex ' style={{marginBottom:"10vh",justifyContent:"center",alignItems:"center"}} >
+    <div>
+    <span style={{fontSize:"25px", color:"yellow"}}>Here you can </span>
+    <span style={{color:"red",fontSize:"30px"}}><Typewriter words={word} typeSpeed={40} deleteSpeed={20} loop={Infinity} ></Typewriter></span>
+    <Cursor/>
+    </div>
+    </div>
     </div>
   )
 }
