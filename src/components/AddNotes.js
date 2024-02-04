@@ -14,7 +14,7 @@ const AddNotes = (props) => {
         setvalue({...value,[e.target.name]:e.target.value})
     }
     return (
-        <div className="container addnotes d-flex align-items-center" style={{flexDirection:"column",border:"2px solid black",height:"80vh"}} >
+        <div className="container addnotes d-flex align-items-center" style={{flexDirection:"column",height:"80vh"}} >
             <h3 >AddNotes</h3>
             <form className='my-3 mx-4'>
                 <div className="mb-3">
