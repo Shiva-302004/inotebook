@@ -15,7 +15,7 @@ const Notes = (props) => {
       navigate("/login")
     }
     
-  })
+  },[])
   const ref=useRef(null)
   const refClose=useRef(null)
   const [value,setvalue]=useState({id:"",etitle:"",edescription:"",etag:""})
