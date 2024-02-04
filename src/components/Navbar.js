@@ -26,14 +26,19 @@ const Navbar = () => {
         <li className="nav-item">
           <a className={`nav-link ${location.pathname==='/'?"active":""}`} aria-current="page"  href="/">Home</a>
         </li>
-        <li className="nav-item">
-          <a className={`nav-link ${location.pathname==='/about'?"active":""}`} aria-current="page"  href="/about">About</a>
-        </li>
-        <li className="nav-item">
+        {
+          localStorage.getItem('token')?<>
+          <li className="nav-item">
           <a className={`nav-link ${location.pathname==='/addnotes'?"active":""}`} aria-current="page"  href="/addnotes">addNotes</a>
         </li>
         <li className="nav-item">
           <a className={`nav-link ${location.pathname==='/notes'?"active":""}`} aria-current="page"  href="/notes">Notes</a>
+        </li>
+          </>:""
+        }
+        
+        <li className="nav-item">
+          <a className={`nav-link ${location.pathname==='/about'?"active":""}`} aria-current="page"  href="/about">About</a>
         </li>
         {!localStorage.getItem('token')?<>
         <li className="nav-item">
